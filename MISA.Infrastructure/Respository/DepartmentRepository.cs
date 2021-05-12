@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace MISA.Infrastructure.Respository
 {
+    /// <summary>
+    /// Department Reposiotry implement BaseReposiotry, IDepartmentRepository
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public class DepartmentRepository : BaseReposiotry<Department>, IDepartmentRepository
     {
         public DepartmentRepository(IConfiguration configuration) : base(configuration)

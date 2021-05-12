@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Interfaces.Repository
 {
+    /// <summary>
+    /// Employee Repository implement IBaseRepository
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public interface IEmployeeRepository : IBaseRepository<Employee>
     {
+        /// <summary>
+        /// Lấy dữ liệu của một nhân viên theo mã nhân viên
+        /// </summary>
+        /// <param name="code">Mã nhân viên</param>
+        /// <returns>Dữ liệu đối tượng nhân viên</returns>
         Employee GetEmployeeByCode(string code);
     }
 }

@@ -9,9 +9,15 @@ using System.Threading.Tasks;
 
 namespace MISA.CukCuk.WebAPIs.Controllers
 {
+    /// <summary>
+    /// Employee Controller implement BaseEntityController
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public class EmployeeController : BaseEntityController<Employee>
     {
         IEmployeeService _employeeService;
+
+        // Constuctor
         public EmployeeController(IEmployeeService employeeService) : base(employeeService)
         {
             _employeeService = employeeService;

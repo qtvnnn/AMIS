@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Interfaces.Service
 {
+    /// <summary>
+    /// Department Service implement IBaseService
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public interface IDepartmentService : IBaseService<Department>
     {
     }

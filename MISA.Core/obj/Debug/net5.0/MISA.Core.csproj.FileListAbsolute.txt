@@ -46,3 +46,17 @@ C:\Users\nnnang\Desktop\WebAPIs-main\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj
 C:\Users\nnnang\Desktop\WebAPIs-main\MISA.Core\obj\Debug\net5.0\MISA.Core.dll
 C:\Users\nnnang\Desktop\WebAPIs-main\MISA.Core\obj\Debug\net5.0\ref\MISA.Core.dll
 C:\Users\nnnang\Desktop\WebAPIs-main\MISA.Core\obj\Debug\net5.0\MISA.Core.pdb
+E:\desktop1105\BE\AMIS\MISA.Core\bin\Debug\net5.0\MISA.Core.deps.json
+E:\desktop1105\BE\AMIS\MISA.Core\bin\Debug\net5.0\MISA.Core.dll
+E:\desktop1105\BE\AMIS\MISA.Core\bin\Debug\net5.0\ref\MISA.Core.dll
+E:\desktop1105\BE\AMIS\MISA.Core\bin\Debug\net5.0\MISA.Core.pdb
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.csprojAssemblyReference.cache
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.AssemblyInfoInputs.cache
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.AssemblyInfo.cs
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj.CoreCompileInputs.cache
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.dll
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\ref\MISA.Core.dll
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.pdb
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.Properties.Resources.resources
+E:\desktop1105\BE\AMIS\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj.GenerateResource.cache

@@ -9,9 +9,15 @@ using System.Threading.Tasks;
 
 namespace MISA.CukCuk.WebAPIs.Controllers
 {
+    /// <summary>
+    /// Department Controller implement BaseEntityController
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public class DepartmentController : BaseEntityController<Department>
     {
         IDepartmentService _departmentService;
+
+        // Constructor
         public DepartmentController(IDepartmentService departmentService) : base(departmentService)
         {
             _departmentService = departmentService;

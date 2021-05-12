@@ -10,40 +10,39 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Services
 {
+    /// <summary>
+    /// Interface Base Service implement IBaseService
+    /// </summary>
+    /// <typeparam name="T">Đối tượng truyền vào</typeparam>
+    /// CreatedBy: NNNANG (12/05/21)
     public class BaseService<T> : IBaseService<T> where T : BaseEntity
     {
         IBaseRepository<T> _baseRepository;
         ServiceResult _serviceResult;
+
         public BaseService(IBaseRepository<T> baseRepository)
         {
             _baseRepository = baseRepository;
-            _serviceResult = new ServiceResult() { MISAcode = Enum.MISACode.Success };
-        }
-        public ServiceResult Delete(Guid entityId)
-        {
-            _serviceResult.Data = _baseRepository.Delete(entityId);
-            return _serviceResult;
+            _serviceResult = new ServiceResult() { MISACode = Enum.MISACode.Success };
         }
 
         public IEnumerable<T> Get()
         {
             return _baseRepository.Get();
         }
-
         public T GetById(Guid entityId)
         {
             return _baseRepository.GetById(entityId);
         }
-
         public virtual ServiceResult Insert(T entity)
         {
-            entity.EntityState = Enum.EntityState.Update;
+            entity.EntityState = Enum.EntityState.Insert;
             //Thực hiện validate
             var isValidate = Validate(entity);
             if (isValidate == true)
             {
                 _serviceResult.Data = _baseRepository.Insert(entity);
-                _serviceResult.MISAcode = Enum.MISACode.IsValid;
+                _serviceResult.MISACode = Enum.MISACode.IsValid;
                 return _serviceResult;
             }
             else
@@ -51,15 +50,14 @@ namespace MISA.Core.Services
                 return _serviceResult;
             }
         }
-
         public ServiceResult Update(T entity)
         {
             entity.EntityState = Enum.EntityState.Update;
             var isValidate = Validate(entity);
             if (isValidate == true)
             {
-                _serviceResult.Data = _baseRepository.Insert(entity);
-                _serviceResult.MISAcode = Enum.MISACode.IsValid;
+                _serviceResult.Data = _baseRepository.Update(entity);
+                _serviceResult.MISACode = Enum.MISACode.IsValid;
                 return _serviceResult;
             }
             else
@@ -67,7 +65,11 @@ namespace MISA.Core.Services
                 return _serviceResult;
             }
         }
-
+        public ServiceResult Delete(Guid entityId)
+        {
+            _serviceResult.Data = _baseRepository.Delete(entityId);
+            return _serviceResult;
+        }
         private bool Validate(T entity)
         {
             var mesArrayErro = new List<string>();
@@ -78,30 +80,35 @@ namespace MISA.Core.Services
             foreach (var property in properties)
             {
                 var propertyValue = property.GetValue(entity);
-                var displayName = property.GetCustomAttributes(typeof(DisplayNameAttribute), true);
+                var displayName = string.Empty;
+                var displayNameAttributes = property.GetCustomAttributes(typeof(DisplayName), true);
+                if (displayNameAttributes.Length > 0)
+                {
+                    displayName = (displayNameAttributes[0] as DisplayName).Name;
+                }
                 //Kiểm tra xem có attribute cần phải validate không:
                 if (property.IsDefined(typeof(Required), false))
                 {
                     //check bắt buộc nhập
-                    if (propertyValue == null)
+                    if (propertyValue == "")
                     {
                         isValidate = false;
-                        mesArrayErro.Add($"Thông tin {property.Name} không được phép để trống");
-                        _serviceResult.MISAcode = Enum.MISACode.NotValid;
-                        _serviceResult.Messenger = "Dữ liệu không hợp lệ";
+                        mesArrayErro.Add(string.Format(Properties.Resources.Msg_Required, displayName));
+                        _serviceResult.MISACode = Enum.MISACode.NotValid;
+                        _serviceResult.Messenger = Properties.Resources.Msg_IsNotValid;
                     }
                 }
                 if (property.IsDefined(typeof(Duplicate), false))
                 {
                     //check trùng dữ liệu
                     var propertyName = property.Name;
-                    var entityDuplicate = _baseRepository.GetEntityBySpecs(propertyName, property.GetValue(entity));
+                    var entityDuplicate = _baseRepository.GetEntityBySpecs(entity, property);
                     if (entityDuplicate != null)
                     {
                         isValidate = false;
-                        mesArrayErro.Add($"Thông tin {property.Name} đã tồn tại");
-                        _serviceResult.MISAcode = Enum.MISACode.NotValid;
-                        _serviceResult.Messenger = "Dữ liệu không hợp lệ";
+                        mesArrayErro.Add(string.Format(Properties.Resources.Msg_Duplicate, displayName));
+                        _serviceResult.MISACode = Enum.MISACode.NotValid;
+                        _serviceResult.Messenger = Properties.Resources.Msg_IsNotValid;
                     }
                 }
             }

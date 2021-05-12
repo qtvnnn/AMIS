@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 
 namespace MISA.Infrastructure.Respository
 {
+    /// <summary>
+    /// Employee Reposiotry implement BaseReposiotry, IEmployeeRepository
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public class EmployeeRepository : BaseReposiotry<Employee>, IEmployeeRepository
     {
         public EmployeeRepository(IConfiguration configuration) : base(configuration)

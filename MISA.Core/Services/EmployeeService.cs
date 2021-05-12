@@ -9,9 +9,15 @@ using System.Threading.Tasks;
 
 namespace MISA.Core.Services
 {
+    /// <summary>
+    /// Employee Service implement BaseService, IEmployeeService
+    /// </summary>
+    /// CreatedBy: NNNANG (12/05/21)
     public class EmployeeService : BaseService<Employee>, IEmployeeService
     {
         IEmployeeRepository _employeeRepository;
+
+        // Constructor
         public EmployeeService(IEmployeeRepository employeeRepository) : base(employeeRepository)
         {
             _employeeRepository = employeeRepository;
