@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace MISA.Core.Interfaces.Repository
 {
     /// <summary>
-    /// Department Repository implement IBaseRepository
+    /// Interface Department Repository implement IBaseRepository
     /// </summary>
     /// CreatedBy: NNNANG (12/05/21)
     public interface IDepartmentRepository : IBaseRepository<Department>
