@@ -578,19 +578,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\nnnang\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\desktop1105\\BE\\AMIS\\MISA.CukCuk.WebAPIs\\MISA.CukCuk.WebAPIs.csproj",
+      "projectUniqueName": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.CukCuk.WebAPIs\\MISA.CukCuk.WebAPIs.csproj",
       "projectName": "MISA.CukCuk.WebAPIs",
-      "projectPath": "E:\\desktop1105\\BE\\AMIS\\MISA.CukCuk.WebAPIs\\MISA.CukCuk.WebAPIs.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\desktop1105\\BE\\AMIS\\MISA.CukCuk.WebAPIs\\obj\\",
+      "projectPath": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.CukCuk.WebAPIs\\MISA.CukCuk.WebAPIs.csproj",
+      "packagesPath": "C:\\Users\\nnnang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.CukCuk.WebAPIs\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nnnang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -604,11 +609,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\desktop1105\\BE\\AMIS\\MISA.Core\\MISA.Core.csproj": {
-              "projectPath": "E:\\desktop1105\\BE\\AMIS\\MISA.Core\\MISA.Core.csproj"
+            "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Core\\MISA.Core.csproj": {
+              "projectPath": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Core\\MISA.Core.csproj"
             },
-            "E:\\desktop1105\\BE\\AMIS\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
-              "projectPath": "E:\\desktop1105\\BE\\AMIS\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
+            "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
             }
           }
         }

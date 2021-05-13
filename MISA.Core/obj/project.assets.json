@@ -80,19 +80,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\nnnang\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\desktop1105\\BE\\AMIS\\MISA.Core\\MISA.Core.csproj",
+      "projectUniqueName": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Core\\MISA.Core.csproj",
       "projectName": "MISA.Core",
-      "projectPath": "E:\\desktop1105\\BE\\AMIS\\MISA.Core\\MISA.Core.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\desktop1105\\BE\\AMIS\\MISA.Core\\obj\\",
+      "projectPath": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Core\\MISA.Core.csproj",
+      "packagesPath": "C:\\Users\\nnnang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nnnang\\Desktop\\be\\AMIS\\MISA.Core\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nnnang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

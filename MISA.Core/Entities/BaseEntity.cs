@@ -21,7 +21,7 @@ namespace MISA.Core.Entities
         /// <summary>
         /// Ngày tạo đối tượng
         /// </summary>
-        public DateTime CreateDate { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         /// <summary>
         /// Người tạo đối tượng
