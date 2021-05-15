@@ -13,5 +13,8 @@ namespace MISA.Core.Interfaces.Service
     /// CreatedBy: NNNANG (12/05/21)
     public interface IEmployeeService : IBaseService<Employee>
     {
+        IEnumerable<Employee> Search(string search);
+
+        string GetNewEmployeeCode();
     }
 }

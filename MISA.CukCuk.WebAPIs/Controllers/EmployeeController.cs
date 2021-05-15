@@ -22,5 +22,29 @@ namespace MISA.CukCuk.WebAPIs.Controllers
         {
             _employeeService = employeeService;
         }
+
+        [HttpGet("employeeFilter")]
+        public IActionResult Search(string search)
+        {
+            var entities = _employeeService.Search(search);
+            return Ok(entities);
+        }
+
+        [HttpGet("newEmployeeCode")]
+        public IActionResult GetNewEmployeeCode()
+        {
+            try
+            {
+                var entities = _employeeService.GetNewEmployeeCode();
+                string numberEmployeeCode = entities.Substring(3);//Cắt chuỗi lấy các số của mã nhân viên
+                string newEmployeeCode = "VN-" + (Int32.Parse(numberEmployeeCode) + 1);//tăng thêm 1 và ghép trở lại thành mã nhân viên hoàn chỉnh
+                return Ok(newEmployeeCode);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

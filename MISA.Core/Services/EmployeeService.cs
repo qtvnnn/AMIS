@@ -22,5 +22,15 @@ namespace MISA.Core.Services
         {
             _employeeRepository = employeeRepository;
         }
+
+        public IEnumerable<Employee> Search(string search)
+        {
+            return _employeeRepository.GetEmployeeByCodeNamePhone(search);
+        }
+
+        public string GetNewEmployeeCode()
+        {
+            return _employeeRepository.GetNewEmployeeCode();
+        }
     }
 }

@@ -84,8 +84,7 @@ namespace MISA.Infrastructure.Respository
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
-                    //transaction.Rollback();
+                    transaction.Rollback();
                 }
             }
             return row;

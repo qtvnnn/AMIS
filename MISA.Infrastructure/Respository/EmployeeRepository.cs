@@ -26,5 +26,22 @@ namespace MISA.Infrastructure.Respository
             var res = _dbConnection.Query<Employee>("Proc_GetEmployeeByCode", new { EmployeeCode = code }, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return res;
         }
+
+        public IEnumerable<Employee> GetEmployeeByCodeNamePhone(string search)
+        {
+
+            var sql = "  SELECT * FROM Employee e WHERE e.EmployeeCode LIKE '%" + search + "%' OR e.EmployeeName LIKE '%" + search + "%' OR e.PhoneNumber LIKE '%" + search + "%' ORDER BY e.CreatedDate DESC";
+            var res = _dbConnection.Query<Employee>(sql, commandType: CommandType.Text);
+
+            return res;
+        }
+
+        public string GetNewEmployeeCode()
+        {
+            var sql = "SELECT e.EmployeeCode FROM Employee e ORDER BY e.EmployeeCode DESC LIMIT 1;";
+            var res = _dbConnection.QueryFirstOrDefault<string>(sql);
+
+            return res;
+        }
     }
 }

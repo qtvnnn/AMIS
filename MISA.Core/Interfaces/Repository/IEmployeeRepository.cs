@@ -19,5 +19,9 @@ namespace MISA.Core.Interfaces.Repository
         /// <param name="code">Mã nhân viên</param>
         /// <returns>Dữ liệu đối tượng nhân viên</returns>
         Employee GetEmployeeByCode(string code);
+
+        IEnumerable<Employee> GetEmployeeByCodeNamePhone(string search);
+
+        string GetNewEmployeeCode();
     }
 }
