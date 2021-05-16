@@ -22,5 +22,12 @@ namespace MISA.CukCuk.WebAPIs.Controllers
         {
             _departmentService = departmentService;
         }
+
+        [HttpGet("departmentById")]
+        public IActionResult Search(Guid id)
+        {
+            var entities = _departmentService.GetDepartmentById(id);
+            return Ok(entities);
+        }
     }
 }

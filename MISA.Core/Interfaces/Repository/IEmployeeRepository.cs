@@ -20,6 +20,8 @@ namespace MISA.Core.Interfaces.Repository
         /// <returns>Dữ liệu đối tượng nhân viên</returns>
         Employee GetEmployeeByCode(string code);
 
+        IEnumerable<Employee> GetEmployeesWithDepartmentName();
+
         IEnumerable<Employee> GetEmployeeByCodeNamePhone(string search);
 
         string GetNewEmployeeCode();

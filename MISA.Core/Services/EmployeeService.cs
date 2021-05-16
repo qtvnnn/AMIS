@@ -23,6 +23,11 @@ namespace MISA.Core.Services
             _employeeRepository = employeeRepository;
         }
 
+        public IEnumerable<Employee> GetEmployeesWithDepartmentName()
+        {
+            return _employeeRepository.GetEmployeesWithDepartmentName();
+        }
+
         public IEnumerable<Employee> Search(string search)
         {
             return _employeeRepository.GetEmployeeByCodeNamePhone(search);
@@ -32,5 +37,7 @@ namespace MISA.Core.Services
         {
             return _employeeRepository.GetNewEmployeeCode();
         }
+
+
     }
 }

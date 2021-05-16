@@ -13,5 +13,6 @@ namespace MISA.Core.Interfaces.Repository
     /// CreatedBy: NNNANG (12/05/21)
     public interface IDepartmentRepository : IBaseRepository<Department>
     {
+        Department GetDepartmentById(Guid departmentId);
     }
 }

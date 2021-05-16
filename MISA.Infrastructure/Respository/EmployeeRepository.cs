@@ -27,6 +27,12 @@ namespace MISA.Infrastructure.Respository
             return res;
         }
 
+        public IEnumerable<Employee> GetEmployeesWithDepartmentName()
+        {
+            var res = _dbConnection.Query<Employee>("Proc_GetEmployeesWithDepartmentName", commandType: CommandType.StoredProcedure);
+            return res;
+        }
+
         public IEnumerable<Employee> GetEmployeeByCodeNamePhone(string search)
         {
 

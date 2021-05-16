@@ -15,6 +15,8 @@ namespace MISA.Core.Interfaces.Service
     {
         IEnumerable<Employee> Search(string search);
 
+        IEnumerable<Employee> GetEmployeesWithDepartmentName();
         string GetNewEmployeeCode();
+
     }
 }

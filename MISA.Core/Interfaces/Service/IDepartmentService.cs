@@ -13,5 +13,7 @@ namespace MISA.Core.Interfaces.Service
     /// CreatedBy: NNNANG (12/05/21)
     public interface IDepartmentService : IBaseService<Department>
     {
+        Department GetDepartmentById(Guid departmentId);
+
     }
 }

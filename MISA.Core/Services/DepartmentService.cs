@@ -22,5 +22,10 @@ namespace MISA.Core.Services
         {
             _departmentRepository = departmentRepository;
         }
+
+        public Department GetDepartmentById(Guid departmentId)
+        {
+            return _departmentRepository.GetDepartmentById(departmentId);
+        }
     }
 }

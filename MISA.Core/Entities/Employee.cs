@@ -51,6 +51,11 @@ namespace MISA.Core.Entities
         public Guid DepartmentId { get; set; }
 
         /// <summary>
+        /// Tên phòng ban
+        /// </summary>
+        public string DepartmentName { get; set; }
+
+        /// <summary>
         /// Số chứng minh thư
         /// </summary>
         public string IdentityNumber { get; set; }

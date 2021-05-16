@@ -14,13 +14,20 @@ namespace MISA.CukCuk.WebAPIs.Controllers
     /// </summary>
     /// CreatedBy: NNNANG (12/05/21)
     public class EmployeeController : BaseEntityController<Employee>
-    {
+    {   
         IEmployeeService _employeeService;
 
         // Constuctor
         public EmployeeController(IEmployeeService employeeService) : base(employeeService)
         {
             _employeeService = employeeService;
+        }
+
+        [HttpGet("EmployeesWithDepartment")]
+        public IActionResult GetEmployeesWithDepartmentName()
+        {
+            var entities = _employeeService.GetEmployeesWithDepartmentName();
+            return Ok(entities);
         }
 
         [HttpGet("employeeFilter")]
@@ -37,7 +44,7 @@ namespace MISA.CukCuk.WebAPIs.Controllers
             {
                 var entities = _employeeService.GetNewEmployeeCode();
                 string numberEmployeeCode = entities.Substring(3);//Cắt chuỗi lấy các số của mã nhân viên
-                string newEmployeeCode = "VN-" + (Int32.Parse(numberEmployeeCode) + 1);//tăng thêm 1 và ghép trở lại thành mã nhân viên hoàn chỉnh
+                string newEmployeeCode = "NV-" + (Int32.Parse(numberEmployeeCode) + 1);//tăng thêm 1 và ghép trở lại thành mã nhân viên hoàn chỉnh
                 return Ok(newEmployeeCode);
 
             }
